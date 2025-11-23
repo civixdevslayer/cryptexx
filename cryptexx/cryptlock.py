@@ -1,9 +1,9 @@
 import base64
 from colorama import Fore
 def encrypt(text: str, key: str) -> str:
-    if key is None:
+    if key == "":
         print(f"{Fore.RED}[ERROR]{Fore.RESET} An error occurred: encryption key cannot be none.")
-    if text is None:
+    if text == "":
         print(f"{Fore.RED}[ERROR]{Fore.RESET} An error occurred: text to encrypt cannot be none.")
 
     encrypted_bytes = bytearray()
@@ -15,9 +15,9 @@ def encrypt(text: str, key: str) -> str:
     return base64.b64encode(encrypted_bytes).decode()
 
 def decrypt(text: str, key: str) -> str:
-    if key is None:
+    if key == "":
         print(f"{Fore.RED}[ERROR]{Fore.RESET} An error occurred: encryption key cannot be none.")
-    if text is None:
+    if text == "":
         print(f"{Fore.RED}[ERROR]{Fore.RESET} An error occurred: text to decrypt cannot be none.")
     encrypted_bytes = base64.b64decode(text)
     decrypted = ""
