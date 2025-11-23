@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+cryptexx/___init__.py
+cryptexx/cryptexx.py
+cryptexx/cryptlock.py
+cryptexx.egg-info/PKG-INFO
+cryptexx.egg-info/SOURCES.txt
+cryptexx.egg-info/dependency_links.txt
+cryptexx.egg-info/top_level.txt
