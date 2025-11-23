@@ -1,9 +1,13 @@
 from random import randint
+from colorama import Fore
 
 def encrypt(text):
     tmp = 0
     encypted_text = ""
-    
+
+    if text is None:
+        print(f"{Fore.RED}[ERROR]{Fore.RESET} An error occurred: text to encrypt cannot be none.")
+        return "Error occurred"
     for i in range(len(text)):
         if tmp == 0:
             encypted_text = encypted_text + chr(randint(33, 126))
@@ -16,6 +20,10 @@ def encrypt(text):
     return encypted_text
 
 def decrypt(encypted_text):
+    if encypted_text is None:
+        print(f"{Fore.RED}[ERROR]{Fore.RESET} An error occurred: text to decrypt cannot be none.")
+        return "Error occurred"
+
     tmp = 0
     decrypted_text = ""
 

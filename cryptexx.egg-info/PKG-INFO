@@ -5,6 +5,9 @@ Summary: An encryption and decryption module.
 Author: Kevin Molnar
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: colorama
+Dynamic: license-file
 
 cryptlock is a new function that allows users to encrypt text with a key and can only be decrypted with that key
 
